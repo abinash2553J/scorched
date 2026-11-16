@@ -1,9 +1,17 @@
+import Image from "next/image";
+
 export function ScorchedBrand({ compact = false }: { compact?: boolean }) {
   return (
     <span className="flex items-center gap-2">
-      <span
+      <Image
+        alt=""
         aria-hidden="true"
-        className="size-2 shrink-0 rounded-full bg-accent"
+        className={`shrink-0 ${
+          compact ? "h-5 w-[18px]" : "h-[27px] w-6"
+        }`}
+        height={28}
+        src="/flame.svg"
+        width={25}
       />
       <span
         className={`font-display font-semibold leading-none tracking-[-0.04em] ${
@@ -12,6 +20,6 @@ export function ScorchedBrand({ compact = false }: { compact?: boolean }) {
       >
         scorched
       </span>
-      </span>
+    </span>
   );
 }

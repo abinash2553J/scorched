@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "Scorched — your YouTube likes, under review",
   description:
     "A data-backed YouTube roast. Your score comes from your likes; Gemini writes only the evidence-backed jokes.",
+  icons: {
+    icon: "/flame.svg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
